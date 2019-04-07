@@ -1,5 +1,5 @@
 {
-  "name": "paraffin test",
+  "name": "paraffin",
   "version": "0.2.0",
   "description": "Paraffin Platform test",
   "main": "http.test.js",
