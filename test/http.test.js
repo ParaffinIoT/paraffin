@@ -1,6 +1,7 @@
 'use strict'
 
 var request = require('supertest')
+process.env.HTTP_PORT = 3000
 
 describe('Broker HTTP Test', () => {
   var url = 'localhost:' + process.env.HTTP_PORT.toString()
