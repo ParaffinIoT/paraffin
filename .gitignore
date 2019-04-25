@@ -35,6 +35,4 @@ doc
 # Emacs
 *~
 
-# env file for process.env
-.env
 package-lock.json
