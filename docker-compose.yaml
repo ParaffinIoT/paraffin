@@ -5,19 +5,19 @@ services:
       container_name: mongodb
 
     parse-server:
-      image: parse-server:latest
-      container_name: parse-server
-      hostname: parse-server
+      image: paraffin/apiserver:latest
+      container_name: apiserver
+      hostname: apiserver
       ports:
         - "127.0.0.1:5000:5000"
       environment:
         NODE_ENV: production
-        PROCESS_TYPE: parse-server
-        PORT: 5000
-      env_file: parse-server.env
+      env_file: apiserver.env
+      depends_on:
+        - mongodb
 
     broker:
-      image: broker:latest
+      image: paraffin/broker:latest
       container_name: broker
       expose:
         - 1883
@@ -25,18 +25,6 @@ services:
         - 2345
       environment:
         NODE_ENV: production
-        PROCESS_TYPE: parse-server
-        APP_NAME: Paraffin Broker
-        DB_URL: mongodb://mongodb:27017
-        DB_PONTE_NAME: mongodb://mongodb:27017/ponte
-        DB_AUTH_URL: mongodb://mongodb:27017/
-        DB_AUTH_NAME: paraffin
-        DB_AUTH_COLLECTION: auth
-        MQTT_PORT: 1883
-        HTTP_PORT: 3000
-        COAP_PORT: 2345
-        AUTHENTICATION_TYPE: parse-server
-        REQUEST_TIMEOUT: 3000
       env_file: broker.env
       depends_on:
         - mongodb
