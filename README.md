@@ -1,5 +1,5 @@
 # Paraffin
-open source microservice IoT platform
+open source microservice IoT platform. See [Paraffin Platform](https://paraffiniot.github.io)
 
 
 ## About
