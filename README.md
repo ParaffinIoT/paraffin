@@ -1,8 +1,6 @@
 # Paraffin
 open source microservice IoT platform
 
-# Paraffin IoT Platform Website
-
 
 ## About
 
