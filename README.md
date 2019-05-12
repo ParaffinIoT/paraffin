@@ -19,12 +19,19 @@ Broker is based on Ponte and is under development so it should work. It need tim
 * Sercured with authentication and JWT.
 
 
-## Steps to run
+## Installation
+Paraffin IoT Platform is installed by two methods. Firstly besure docker and docker-compose is installed.
 
-Firstly besure docker and docker-compose is installed.
+### Install by script
+Run the following command in your terminal to install the latest official Paraffin IoT Platform release.
 
+```bash
+sudo curl -o- https://raw.githubusercontent.com/ParaffinIoT/paraffin/master/install.sh | bash
+```
 
-Download Paraffin IoT Platform git;
+### Install by git
+Download Paraffin IoT Platform git
+
 ```bash
 git clone https://github.com/ParaffinIoT/paraffin
 
