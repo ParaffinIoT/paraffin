@@ -17,7 +17,7 @@ services:
         - mongodb
 
     broker:
-      image: paraffin/broker:latest
+      image: paraffin/broker:0.0.3
       container_name: broker
       expose:
         - 1883
