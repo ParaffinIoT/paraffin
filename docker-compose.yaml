@@ -6,6 +6,7 @@ services:
 
     parse-server:
       image: paraffin/apiserver:latest
+      restart: on-failure
       container_name: apiserver
       hostname: apiserver
       ports:
@@ -18,6 +19,7 @@ services:
 
     broker:
       image: paraffin/broker:0.0.3
+      restart: on-failure
       container_name: broker
       expose:
         - 1883
