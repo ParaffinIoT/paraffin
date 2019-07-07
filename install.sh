@@ -29,21 +29,19 @@ fi
 if [ -f "$file_broker" ]
 then
 	echo "" && echo "$file_broker found."
-  mv ./paraffin/broker.env ./paraffin/broker.env
+	mv ./broker.env ./paraffin/broker.env
 else
 	echo "" && echo "$file_broker not found." && echo ">"
-	echo "Default .env is loading."
-	mv ./paraffin/broker.sample ./paraffin/broker.env
+	echo "Default broker.env is loading."
 fi
 
 if [ -f "$file_apiserver" ]
 then
 	echo "" && echo "$file_apiserver found."
-  mv ./paraffin/apiserver.env ./paraffin/apiserver.env
+  	mv ./apiserver.env ./paraffin/apiserver.env
 else
 	echo "" && echo "$file_apiserver not found."
-	echo "Default .env is loading."
-	mv ./paraffin/apiserver.sample ./paraffin/apiserver.env
+	echo "Default apiserver.env is loading."
 fi
 
 cd paraffin
