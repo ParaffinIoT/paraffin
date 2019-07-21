@@ -18,7 +18,7 @@ services:
         - mongodb
 
     broker:
-      image: paraffin/broker:0.0.3
+      image: paraffin/broker:0.0.4
       restart: on-failure
       container_name: broker
       expose:
