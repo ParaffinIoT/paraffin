@@ -30,3 +30,19 @@ services:
       env_file: broker.env
       depends_on:
         - mongodb
+
+    dashboard:
+      image: paraffin/dashboard:0.0.7
+      restart: always
+      container_name: dashboard
+      hostname: dashboard
+      expose:
+        - 3030
+        - 8080
+      ports:
+        - "127.0.0.1:3030:3030"
+      environment:
+        NODE_ENV: production
+      env_file: dashboard.env
+      depends_on:
+        - parse-server
